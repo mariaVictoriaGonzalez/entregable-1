@@ -65,6 +65,8 @@ manejadorDeProductos.addProduct(
 console.log("Recuperando productos...", manejadorDeProductos.getProducts());
 
 console.log("Buscando producto con el codigo: 123 ......", manejadorDeProductos.getProductById(123))
+console.log("Buscando producto con el codigo: 1247 ......", manejadorDeProductos.getProductById(1247))
+
 
 manejadorDeProductos.addProduct(
     new Product("Producto prueba 3", "Este es un producto de prueba... mas.", 280, "Sin imagen.", 1234, 17)
