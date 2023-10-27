@@ -18,7 +18,8 @@ class ProductManager {
         }
 
         if (this.products.find((p) => p.code === product.code)) {
-            console.log("El código ya existe.")
+            product.code = Math.trunc(Math.random()*100);
+            console.log("El código de producto ya existe. Se agregara el producto con un codigo generado automaticamente...");
         }
 
         this.products.push(product);
@@ -71,3 +72,5 @@ console.log("Buscando producto con el codigo: 1247 ......", manejadorDeProductos
 manejadorDeProductos.addProduct(
     new Product("Producto prueba 3", "Este es un producto de prueba... mas.", 280, "Sin imagen.", 1234, 17)
 );
+
+console.log("Recuperando productos...", manejadorDeProductos.getProducts());
